@@ -1,7 +1,26 @@
-const container = document.querySelector(".container"); 
+const container = document.querySelector("#container"); 
 
-for (let i = 1; i < 257; i++) {
-    const div = document.createElement("div");
-    div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";  
-    container.appendChild(div);
+function createGrids(rows, cols){
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (i = 0; i < (rows * cols); i++){
+    let square = document.createElement("div");
+    square.classList.add('grid-item');
+    container.appendChild(square);
   }
+
+}
+
+function onHover(e) { 
+  container.addEventListener("onmouseHover", e {
+
+  }
+
+}); 
+
+
+
+
+
+// Creates 16 x 16 grid
+createGrids(16, 16); 
